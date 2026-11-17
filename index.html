@@ -24,6 +24,20 @@ section{padding:110px 9%}.section-top{display:flex;justify-content:space-between
 .member-popover-card .member h3{font-size:30px;margin:20px 8px 2px}
 .member-popover-card .member p{font-size:11px;margin:4px 8px}
 .member-popover-close{position:absolute;z-index:2;top:22px;right:22px;width:40px;height:40px;border:1px solid #ffffffb8;border-radius:50%;background:#172a22d9;color:white;font-size:25px;line-height:1;cursor:pointer}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.product{background:#e8e5d9;padding:10px 10px 20px;cursor:pointer;transition:transform .35s,box-shadow .35s;transform-origin:center}
+.product:hover{transform:translateY(-5px);box-shadow:0 18px 38px #20392e20}
+.product:focus-visible{outline:3px solid #82977b;outline-offset:4px}
+.product img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;filter:saturate(.82)}
+.product h3{font:21px var(--serif);font-weight:400;margin:14px 8px 4px}
+.product p{font-size:12px;color:var(--muted);margin:0 8px}
+.product-popover-card .product{padding:0;background:transparent;cursor:default;box-shadow:none;transform:none}
+.product-popover-card .product img{aspect-ratio:4/3;max-height:54vh}
+.product-popover-card .product h3{font-size:30px;margin:20px 8px 6px}
+.product-popover-card .product p{font-size:14px;line-height:1.7;margin:4px 8px}
+@media(max-width:800px){.products{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.products{grid-template-columns:1fr 1fr;gap:10px}.product{padding:7px 7px 14px}.product h3{font-size:16px}.product p{font-size:10px}}
+
 body.member-modal-open{overflow:hidden}
 @media(prefers-reduced-motion:reduce){.member-popover,.member-popover-card{transition:none}}
 .expedition{background:#e7e7dc}.exp-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:8%;align-items:center}.exp-image{height:570px;position:relative}.exp-image img{width:100%;height:100%;object-fit:cover}.exp-number{position:absolute;left:-20px;top:30px;background:var(--forest);color:white;padding:17px 20px;font:italic 24px var(--serif)}.exp-copy p{font-size:14px;color:#69746b}.timeline{margin-top:30px;border-top:1px solid var(--line)}.timeline div{display:flex;gap:24px;padding:15px 0;border-bottom:1px solid var(--line);font-size:12px}.timeline b{font-weight:500;min-width:105px;color:#788575}
@@ -60,7 +74,7 @@ footer{background:#172a22;color:#dbe1d7;padding:42px 9%;display:flex;justify-con
 </style>
 </head>
 <body>
-<header class="topbar" id="topbar"><a class="brand" href="#home">RT4<small>EKSPEDISI</small></a><nav class="nav" id="nav"><a href="#home">Beranda</a><a href="#profil">Profil</a><a href="#anggota">Anggota</a><a href="#ekspedisi">Ekspedisi</a><a href="#jurnal">Jurnal</a><a href="#galeri">Foto</a><a href="#video">Video</a></nav><button class="menu" id="menu" aria-label="Buka navigasi">☰</button></header>
+<header class="topbar" id="topbar"><a class="brand" href="#home">RT4<small>EKSPEDISI</small></a><nav class="nav" id="nav"><a href="#home">Beranda</a><a href="#profil">Profil</a><a href="#anggota">Anggota</a><a href="#produk">Produk</a><a href="#ekspedisi">Ekspedisi</a><a href="#jurnal">Jurnal</a><a href="#galeri">Foto</a><a href="#video">Video</a></nav><button class="menu" id="menu" aria-label="Buka navigasi">☰</button></header>
 <main>
 <section class="hero" id="home"><div class="hero-copy"><div class="eyebrow">Satu kelompok · Banyak cerita · Satu perjalanan</div><h1>RT4<span>EKSPEDISI</span></h1><p>Explore Together, Discover More.</p><a class="outline-btn" href="#profil">Jelajahi Kami <b>↗</b></a></div><div class="scroll-note">GULIR UNTUK MENJELAJAHI ↓</div></section>
 <section id="profil"><div class="about"><div class="about-photo reveal"><img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1100&q=85" alt="Hutan hijau berkabut"><div class="photo-tag">Menemukan cerita di setiap langkah.</div></div><div class="about-copy reveal"><div class="kicker">01 / Tentang kami</div><h2 class="section-title">Mengenal<br>RT4.</h2><p>RT4 adalah kelompok yang berkumpul untuk belajar, bekerja sama, dan menjelajahi pengalaman baru melalui kegiatan EKSPEDISI. Ruang ini menjadi tempat untuk menyimpan perjalanan, proses, dan cerita kebersamaan kami.</p><p>Bagian ini dapat diperbarui dengan sejarah singkat, latar belakang, serta informasi resmi kelompok.</p><div class="facts"><div class="fact"><strong>RT4</strong><span>Nama kelompok</span></div><div class="fact"><strong>EKSPEDISI</strong><span>Kegiatan utama</span></div><div class="fact"><strong>Kolaborasi</strong><span>Nilai utama</span></div><div class="fact"><strong>Eksplorasi</strong><span>Semangat perjalanan</span></div></div></div></div></section>
@@ -71,6 +85,11 @@ footer{background:#172a22;color:#dbe1d7;padding:42px 9%;display:flex;justify-con
 <article class="member reveal"><div class="placeholder">Foto anggota 03</div><h3>[Nama Anggota]</h3><p>[Peran / Tugas]</p></article>
 <article class="member reveal"><div class="placeholder">Foto anggota 04</div><h3>[Nama Anggota]</h3><p>[Peran / Tugas]</p></article>
 </div></section>
+<section id="produk"><div class="section-top reveal"><div><div class="kicker">04 / Karya & hasil</div><h2 class="section-title">Produk RT4.</h2></div><p>Kumpulan produk yang dibuat atau diperkenalkan oleh kelompok RT4. Tekan salah satu kartu untuk melihat detailnya.</p></div><div class="products">
+<article class="product reveal"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85" alt="Foto produk satu"><h3>[Nama Produk 01]</h3><p>[Deskripsi singkat produk.]</p></article>
+<article class="product reveal"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85" alt="Foto produk dua"><h3>[Nama Produk 02]</h3><p>[Deskripsi singkat produk.]</p></article>
+<article class="product reveal"><img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=900&q=85" alt="Foto produk tiga"><h3>[Nama Produk 03]</h3><p>[Deskripsi singkat produk.]</p></article>
+</div></section>
 <section class="expedition" id="ekspedisi"><div class="exp-grid"><div class="exp-image reveal"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85" alt="Pegunungan hijau dan puncak bersalju"><div class="exp-number">01 — 2026</div></div><div class="exp-copy reveal"><div class="kicker">04 / Kegiatan utama</div><h2 class="section-title">Sebuah perjalanan bernama EKSPEDISI.</h2><p>EKSPEDISI merupakan kegiatan utama kelompok RT4. Bagian ini menjadi tempat untuk menceritakan latar belakang kegiatan, tujuan, rangkaian aktivitas, serta hal-hal yang dipelajari selama proses berlangsung.</p><p>[Tambahkan deskripsi kegiatan berdasarkan pengalaman dan informasi asli kelompok.]</p><div class="timeline"><div><b>Latar belakang</b><span>[Ceritakan alasan kegiatan.]</span></div><div><b>Tujuan</b><span>[Tuliskan tujuan kegiatan.]</span></div><div><b>Aktivitas</b><span>[Tuliskan rangkaian aktivitas.]</span></div><div><b>Pencapaian</b><span>[Tuliskan hasil dan pembelajaran.]</span></div></div></div></div></section>
 <section class="journal" id="jurnal"><div class="section-top reveal"><div><div class="kicker">05 / Catatan perjalanan</div><h2 class="section-title">Jurnal Ekspedisi.</h2></div><p>Dokumentasi disusun seperti halaman buku perjalanan. Gunakan tombol untuk membuka halaman berikutnya.</p></div><div class="book-wrap reveal"><div class="book" id="book"><article class="book-page"><div class="page-label" id="left-label">CATATAN 01 / PEMBUKA</div><img id="left-img" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=900&q=85" alt="Pemandangan danau pegunungan"><h3 id="left-title">Awal Perjalanan</h3><p id="left-text">[Tuliskan cerita pembuka perjalanan kelompok RT4 di sini.]</p></article><article class="book-page"><div class="page-label" id="right-label">CATATAN 02 / PERJALANAN</div><img id="right-img" src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=85" alt="Pemandangan alam"><h3 id="right-title">Momen Kebersamaan</h3><p id="right-text">[Tambahkan pengalaman, kegiatan, atau refleksi dari perjalanan.]</p></article></div><div class="book-controls"><button id="prev">← Sebelumnya</button><span class="book-count" id="count">HALAMAN 01 — 04</span><button id="next">Berikutnya →</button></div></div></section>
 <section id="galeri"><div class="section-top reveal"><div><div class="kicker">06 / Album perjalanan</div><h2 class="section-title">Buku Dokumentasi.</h2></div><p>Setiap foto menjadi satu halaman cerita. Buka album seperti membaca buku perjalanan RT4.</p></div><div class="photo-book-wrap reveal"><div class="photo-book" id="photoBook"><article class="photo-page"><div class="photo-index" id="photo-index-a">ALBUM 01 / 01</div><img id="photo-a" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85" alt="Contoh foto dokumentasi satu"><h3 id="photo-title-a">Jejak di alam terbuka</h3><p id="photo-caption-a">[Ganti dengan keterangan dokumentasi asli.]</p></article><article class="photo-page"><div class="photo-index" id="photo-index-b">ALBUM 01 / 02</div><img id="photo-b" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85" alt="Contoh foto dokumentasi dua"><h3 id="photo-title-b">Tenang di antara pegunungan</h3><p id="photo-caption-b">[Ganti dengan keterangan dokumentasi asli.]</p></article></div><div class="photo-book-controls"><button id="photo-prev">← Halaman sebelumnya</button><span class="book-count" id="photo-count">SPREAD 01 / 03</span><button id="photo-next">Halaman berikutnya →</button></div></div><p class="gallery-note">Foto yang tampil masih berupa gambar contoh alam, bukan dokumentasi asli RT4. Ganti gambar dan keterangannya pada daftar album di dalam kode.</p></section>
@@ -79,6 +98,7 @@ footer{background:#172a22;color:#dbe1d7;padding:42px 9%;display:flex;justify-con
 </main>
 <footer><div class="foot-brand">RT4<small>EKSPEDISI</small></div><div class="foot-right">CATATAN PERJALANAN & KEBERSAMAAN<br>© 2026 RT4 — EKSPEDISI</div></footer>
 <div class="member-popover" id="memberPopover" aria-hidden="true"><button class="member-popover-close" id="memberPopoverClose" aria-label="Tutup profil">×</button><div class="member-popover-card" id="memberPopoverCard"></div></div>
+<div class="member-popover product-popover" id="productPopover" aria-hidden="true"><button class="member-popover-close" id="productPopoverClose" aria-label="Tutup detail produk">×</button><div class="member-popover-card product-popover-card" id="productPopoverCard"></div></div>
 <div class="lightbox" id="lightbox"><button id="close" aria-label="Tutup">×</button><img id="lightbox-img" alt="Dokumentasi ukuran besar"></div><button class="to-top" id="toTop" aria-label="Kembali ke atas">↑</button>
 <script>
 const topbar=document.getElementById('topbar'),toTop=document.getElementById('toTop');
@@ -122,6 +142,42 @@ document.querySelectorAll('.members .member').forEach((member,index)=>{
   });
 });
 memberPopoverClose.addEventListener('click',closeMemberPopover);
+const productPopover=document.getElementById('productPopover');
+const productPopoverCard=document.getElementById('productPopoverCard');
+const productPopoverClose=document.getElementById('productPopoverClose');
+let lastFocusedProduct=null;
+function closeProductPopover(){
+  productPopover.classList.remove('open');
+  productPopover.setAttribute('aria-hidden','true');
+  document.body.classList.remove('member-modal-open');
+  productPopoverCard.innerHTML='';
+  if(lastFocusedProduct)lastFocusedProduct.focus();
+}
+function openProductPopover(product){
+  lastFocusedProduct=product;
+  const enlarged=product.cloneNode(true);
+  enlarged.classList.remove('reveal','visible');
+  enlarged.removeAttribute('tabindex');
+  enlarged.removeAttribute('role');
+  productPopoverCard.innerHTML='';
+  productPopoverCard.appendChild(enlarged);
+  productPopover.classList.add('open');
+  productPopover.setAttribute('aria-hidden','false');
+  document.body.classList.add('member-modal-open');
+  productPopoverClose.focus();
+}
+document.querySelectorAll('.products .product').forEach((product,index)=>{
+  product.setAttribute('tabindex','0');
+  product.setAttribute('role','button');
+  product.setAttribute('aria-label','Lihat detail produk '+(index+1));
+  product.addEventListener('click',()=>openProductPopover(product));
+  product.addEventListener('keydown',event=>{
+    if(event.key==='Enter'||event.key===' '){event.preventDefault();openProductPopover(product)}
+  });
+});
+productPopoverClose.addEventListener('click',closeProductPopover);
+productPopover.addEventListener('click',event=>{if(event.target===productPopover)closeProductPopover()});
+document.addEventListener('keydown',event=>{if(event.key==='Escape'&&productPopover.classList.contains('open'))closeProductPopover()});
 memberPopover.addEventListener('click',event=>{if(event.target===memberPopover)closeMemberPopover()});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&memberPopover.classList.contains('open'))closeMemberPopover()});
 

@@ -71,6 +71,26 @@ footer{background:#172a22;color:#dbe1d7;padding:42px 9%;display:flex;justify-con
 .lightbox{position:fixed;inset:0;background:#101b16ed;z-index:50;display:none;align-items:center;justify-content:center;padding:30px}.lightbox.open{display:flex}.lightbox img{max-width:min(90vw,1100px);max-height:82vh;object-fit:contain}.lightbox button{position:absolute;top:24px;right:30px;border:0;background:none;color:white;font-size:34px;cursor:pointer}.to-top{position:fixed;right:25px;bottom:25px;z-index:15;border:0;background:var(--forest);color:white;width:43px;height:43px;border-radius:50%;font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:.3s}.to-top.show{opacity:1;pointer-events:auto}.reveal{opacity:1;transform:none;transition:opacity .8s,transform .8s}.reveal.visible{opacity:1;transform:none}.timeline-event.reveal{opacity:.48;transform:translateY(22px)}.timeline-event.reveal.visible,.timeline-event.active{opacity:1;transform:translateY(0)}
 @media(max-width:800px){.nav{display:none;position:absolute;top:60px;left:0;width:100%;padding:24px 7%;background:#172a22;flex-direction:column;align-items:flex-start;gap:20px}.nav.open{display:flex}.menu{display:block}.hero{padding:0 7% 12vh;background-position:58% center}.hero h1{letter-spacing:-4px}.scroll-note{display:none}section{padding:78px 7%}.section-top{display:block}.section-top p{margin-top:18px}.about,.exp-grid{grid-template-columns:1fr;gap:42px}.about-photo{height:430px;margin-left:12px}.purpose-grid{grid-template-columns:1fr}.members{grid-template-columns:repeat(2,1fr)}.exp-image{height:390px;margin-left:12px}.book{grid-template-columns:1fr}.book-page:first-child{border-right:0;border-bottom:1px solid #d8d4c8}.book-page{padding:30px}.book-page img{height:280px}.book-page h3{font-size:29px}.photo-book{grid-template-columns:1fr}.photo-book:before{display:none}.photo-page:first-child{border-right:0;border-bottom:1px solid #d8d4c8}.photo-page img{height:230px}.video-grid{grid-template-columns:1fr}footer{padding:35px 7%}.foot-right{font-size:9px}}
 @media(max-width:420px){.members{gap:10px}.member{padding:7px 7px 14px}.member h3{font-size:16px}.photo-page{padding:20px}.photo-page img{height:190px}.facts{gap:18px}.book-page{padding:23px}.book-page img{height:220px}.book-page h3{font-size:25px}.hero h1{font-size:76px}}
+
+/* Pastikan teks Profil dan Tujuan & Prinsip selalu terbaca */
+#profil .about-copy,
+#profil .about-copy p,
+#profil .about-copy .facts,
+#profil .about-copy .fact,
+.dark .purpose-grid,
+.dark .purpose,
+.dark .purpose h3,
+.dark .purpose p,
+.dark .purpose .mission-list,
+.dark .purpose .mission-list li,
+.dark .purpose .mission-list strong,
+.dark .purpose .mission-list span{
+  opacity:1!important;
+  visibility:visible!important;
+}
+#profil .about-copy p{color:#657067}
+.dark .purpose p,.dark .purpose .mission-list span{color:#c3cec4}
+
 </style>
 </head>
 <body>

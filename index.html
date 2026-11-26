@@ -54,30 +54,17 @@ body.member-modal-open{overflow:hidden}
 @media(prefers-reduced-motion:reduce){.member-popover,.member-popover-card{transition:none}}
 .expedition{background-color:#e7e7dc;background-image:linear-gradient(rgba(231,231,220,.88),rgba(231,231,220,.88)),var(--bg-ekspedisi),url('images/landscape/pegunungan-ekspedisi.jpg');background-position:center;background-size:cover;background-repeat:no-repeat}.exp-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:8%;align-items:center}.exp-image{height:570px;position:relative}.exp-image img{width:100%;height:100%;object-fit:cover}.exp-number{position:absolute;left:-20px;top:30px;background:var(--forest);color:white;padding:17px 20px;font:italic 24px var(--serif)}.exp-copy p{font-size:14px;color:#69746b}.timeline{margin-top:30px;border-top:1px solid var(--line)}.timeline div{display:flex;gap:24px;padding:15px 0;border-bottom:1px solid var(--line);font-size:12px}.timeline b{font-weight:500;min-width:105px;color:#788575}
 .activity-timeline{background-color:#f3f0e7;background-image:linear-gradient(rgba(243,240,231,.88),rgba(243,240,231,.88)),var(--bg-timeline),url('images/landscape/hero-hutan.jpg');background-position:center;background-size:cover;background-repeat:no-repeat}.timeline-track{position:relative;max-width:1000px;margin:65px auto 10px;padding:5px 0 20px}.timeline-rail{position:absolute;left:50%;top:0;bottom:0;width:3px;transform:translateX(-50%);background:#cbd2c5;border-radius:10px;overflow:visible}.timeline-progress{position:absolute;left:0;top:0;width:100%;height:0;background:linear-gradient(180deg,#a9b9a0,#6f987a);border-radius:10px;box-shadow:0 0 9px #a9c9a5,0 0 20px #8eaf8d;transition:height .12s linear}.timeline-event{position:relative;width:50%;padding:0 58px 58px 0;opacity:.48;transform:translateY(22px);transition:opacity .65s,transform .65s}.timeline-event:nth-of-type(even){margin-left:50%;padding:0 0 58px 58px}.timeline-event.active{opacity:1;transform:translateY(0)}.timeline-dot{position:absolute;right:-8px;top:25px;width:17px;height:17px;border-radius:50%;background:var(--cream);border:3px solid #9cae98;z-index:2;transition:.4s}.timeline-event:nth-of-type(even) .timeline-dot{right:auto;left:-8px}.timeline-event.active .timeline-dot{background:#c6dfb8;border-color:#66896c;box-shadow:0 0 0 6px #a9b9a033,0 0 22px #9fc69a}.timeline-card{background:#e8e5d9;padding:27px 30px;border:1px solid #d7d9cd;box-shadow:0 14px 34px #20392e0a;transition:box-shadow .4s,border-color .4s}.timeline-event.active .timeline-card{border-color:#a9b9a0;box-shadow:0 18px 40px #20392e14}.timeline-meta{font-size:9px;letter-spacing:2px;color:#7d8a78}.timeline-card h3{font:25px var(--serif);font-weight:400;margin:10px 0 8px;color:var(--ink)}.timeline-card p{font-size:12px;line-height:1.8;color:#69746b;margin:0}@media(max-width:800px){.timeline-track{margin:42px 0 0;padding-left:35px}.timeline-rail{left:10px;transform:none}.timeline-event,.timeline-event:nth-of-type(even){width:100%;margin-left:0;padding:0 0 30px 0}.timeline-dot,.timeline-event:nth-of-type(even) .timeline-dot{left:-32px;right:auto;top:22px}.timeline-card{padding:22px}.timeline-card h3{font-size:22px}}@media(prefers-reduced-motion:reduce){.timeline-event,.timeline-dot,.timeline-card,.timeline-progress{transition:none}}.book-wrap{position:relative;max-width:1240px;margin:0 auto}.book{display:grid;grid-template-columns:1fr 1fr;min-height:640px;background:#f3f0e7;box-shadow:0 28px 75px #20392e24}.book-page{padding:48px;position:relative;min-width:0}.book-page:first-child{border-right:1px solid #d8d4c8}.book-page img{width:100%;height:390px;object-fit:cover}.page-label{font-size:10px;letter-spacing:2.5px;color:#83907d;text-transform:uppercase}.book-page h3{font:34px var(--serif);font-weight:400;margin:18px 0 10px}.book-page p{font-size:14px;line-height:1.8;color:#778078}.book-controls{display:flex;justify-content:space-between;align-items:center;margin-top:24px}.book-controls button{border:1px solid var(--forest);background:transparent;color:var(--forest);padding:11px 18px;cursor:pointer;font-size:11px;letter-spacing:1px}.book-controls button:hover{background:var(--forest);color:white}.book-count{font-size:10px;letter-spacing:2px;color:#6e796d}
-#galeri{background-color:var(--cream);background-image:linear-gradient(rgba(243,240,231,.88),rgba(243,240,231,.88)),var(--bg-galeri),url('images/landscape/penutup-perjalanan.jpg');background-position:center;background-size:cover;background-repeat:no-repeat}.photo-book-wrap{max-width:1000px;margin:0 auto}.photo-book{display:grid;grid-template-columns:1fr 1fr;background:#f5f1e7;box-shadow:0 24px 65px #20392e20;position:relative}
-
-.photo-book{position:relative;overflow:visible;perspective:1800px}
-.photo-turn-sheet{position:absolute;z-index:5;top:0;right:0;width:50%;height:100%;transform-origin:left center;transform-style:preserve-3d;pointer-events:none}
-.photo-turn-face{position:absolute;inset:0;backface-visibility:hidden;overflow:hidden;background:#f5f1e7;padding:25px 28px 30px;box-shadow:inset 0 0 18px #20392e12}
-.photo-turn-face.back{transform:rotateY(180deg);background:#f5f1e7}
-.photo-turn-sheet.turning-forward{animation:realPageForward .9s cubic-bezier(.65,.05,.36,1) forwards}
-.photo-turn-sheet.turning-backward{left:0;right:auto;transform-origin:right center;animation:realPageBackward .9s cubic-bezier(.65,.05,.36,1) forwards}
-@keyframes realPageForward{0%{transform:rotateY(0deg);box-shadow:0 4px 12px #172a2220}45%{box-shadow:-18px 8px 28px #172a2240}100%{transform:rotateY(-180deg);box-shadow:0 4px 12px #172a2200}}
-@keyframes realPageBackward{0%{transform:rotateY(0deg);box-shadow:0 4px 12px #172a2220}45%{box-shadow:18px 8px 28px #172a2240}100%{transform:rotateY(180deg);box-shadow:0 4px 12px #172a2200}}
-.photo-turn-face .photo-index{font-size:9px;letter-spacing:2px;color:#87917e}
-.photo-turn-face img{width:100%;height:310px;object-fit:cover;display:block;margin-top:14px}
-.photo-turn-face h3{font:25px var(--serif);font-weight:400;margin:13px 0 4px}
-.photo-turn-face p{font-size:11px;color:#778078;margin:0}
-@media(max-width:800px){
-.photo-turn-sheet{width:100%;left:0;right:auto}
-.photo-turn-sheet.turning-forward{transform-origin:left center}
-.photo-turn-sheet.turning-backward{transform-origin:right center}
-.photo-turn-face{padding:20px}
-.photo-turn-face img{height:230px}
-}
-@media(max-width:420px){.photo-turn-face img{height:190px}}
-@media(prefers-reduced-motion:reduce){.photo-turn-sheet.turning-forward,.photo-turn-sheet.turning-backward{animation-duration:.01ms}}
-.photo-book:before{content:'';position:absolute;left:50%;top:0;bottom:0;width:20px;transform:translateX(-50%);background:linear-gradient(90deg,#0000000b,#fff8,#0000000b);z-index:2;pointer-events:none}.photo-page{padding:25px 28px 30px;min-width:0}.photo-page:first-child{border-right:1px solid #d8d4c8}.photo-page .photo-index{font-size:9px;letter-spacing:2px;color:#87917e}.photo-page img{width:100%;height:310px;object-fit:cover;display:block;margin-top:14px;cursor:zoom-in}.photo-page h3{font:25px var(--serif);font-weight:400;margin:13px 0 4px}.photo-page p{font-size:11px;color:#778078;margin:0}.photo-book-controls{display:flex;align-items:center;justify-content:space-between;margin-top:24px}.photo-book-controls button{border:1px solid var(--forest);background:transparent;padding:11px 18px;color:var(--forest);font-size:11px;cursor:pointer}.photo-book-controls button:hover{background:var(--forest);color:white}.photo-book-controls button:disabled{opacity:.35;cursor:not-allowed}.gallery-note{font-size:11px;color:var(--muted);margin-top:25px}#video{background-color:var(--cream);background-image:linear-gradient(rgba(243,240,231,.88),rgba(243,240,231,.88)),var(--bg-video),url('images/landscape/hero-hutan.jpg');background-position:center;background-size:cover;background-repeat:no-repeat}.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.video-card{background:#e8e5d9;padding:12px}.video-card video{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#172a22}.video-card h3{font:22px var(--serif);font-weight:400;margin:14px 5px 4px}.video-card p{font-size:11px;color:var(--muted);margin:0 5px 8px}.video-note{font-size:11px;color:var(--muted);margin-top:22px}
+#galeri{background-color:var(--cream);background-image:linear-gradient(rgba(243,240,231,.88),rgba(243,240,231,.88)),var(--bg-galeri),url('images/landscape/penutup-perjalanan.jpg');background-position:center;background-size:cover;background-repeat:no-repeat}.photo-gallery-wrap{max-width:1240px;margin:0 auto}
+.photo-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.gallery-item{background:#f5f1e7;padding:12px;box-shadow:0 14px 38px #20392e12;transition:transform .3s,box-shadow .3s;min-width:0}
+.gallery-item:hover{transform:translateY(-5px);box-shadow:0 20px 42px #20392e20}
+.gallery-item img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;cursor:zoom-in}
+.gallery-item h3{font:23px var(--serif);font-weight:400;margin:15px 8px 4px}
+.gallery-item p{font-size:12px;color:var(--muted);margin:0 8px 8px}
+.gallery-note{font-size:11px;color:var(--muted);margin-top:25px}
+@media(max-width:900px){.photo-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}}
+@media(max-width:520px){.photo-gallery{grid-template-columns:1fr;gap:14px}.gallery-item{padding:9px}.gallery-item h3{font-size:20px}}
+#video{background-color:var(--cream);background-image:linear-gradient(rgba(243,240,231,.88),rgba(243,240,231,.88)),var(--bg-video),url('images/landscape/hero-hutan.jpg');background-position:center;background-size:cover;background-repeat:no-repeat}.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.video-card{background:#e8e5d9;padding:12px}.video-card video{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#172a22}.video-card h3{font:22px var(--serif);font-weight:400;margin:14px 5px 4px}.video-card p{font-size:11px;color:var(--muted);margin:0 5px 8px}.video-note{font-size:11px;color:var(--muted);margin-top:22px}
 .closing{min-height:470px;display:grid;place-items:center;text-align:center;color:white;padding:100px 9%;background-image:linear-gradient(#14281d99,#14281dcc),var(--bg-penutup),url('images/landscape/penutup-perjalanan.jpg');background-position:center;background-size:cover;background-repeat:no-repeat}.closing blockquote{max-width:760px;font:clamp(28px,4vw,48px)/1.35 var(--serif);margin:0}.closing p{font-size:10px;letter-spacing:4px;margin-top:30px}
 footer{background:#172a22;color:#dbe1d7;padding:42px 9%;display:flex;justify-content:space-between;align-items:center;gap:25px}.foot-brand{font:32px var(--serif);letter-spacing:4px}.foot-brand small{display:block;font:9px var(--sans);letter-spacing:4px}.foot-right{text-align:right;font-size:10px;letter-spacing:1.5px;color:#aab8aa}
 .lightbox{position:fixed;inset:0;background:#101b16ed;z-index:50;display:none;align-items:center;justify-content:center;padding:30px}.lightbox.open{display:flex}.lightbox img{max-width:min(90vw,1100px);max-height:82vh;object-fit:contain}.lightbox button{position:absolute;top:24px;right:30px;border:0;background:none;color:white;font-size:34px;cursor:pointer}.to-top{position:fixed;right:25px;bottom:25px;z-index:15;border:0;background:var(--forest);color:white;width:43px;height:43px;border-radius:50%;font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:.3s}.to-top.show{opacity:1;pointer-events:auto}.reveal{opacity:1;transform:none;transition:opacity .8s,transform .8s}.reveal.visible{opacity:1;transform:none}.timeline-event.reveal{opacity:.48;transform:translateY(22px)}.timeline-event.reveal.visible,.timeline-event.active{opacity:1;transform:translateY(0)}
@@ -1154,84 +1141,17 @@ Menciptakan perjalanan EKSPEDISI yang menyenangkan, inspiratif, dan penuh kenang
 --></div><!--
 --><h2 class="section-title"><!--
 --><!--
--->Video Ekspedisi.<!--
---></h2><!--
---></div><!--
---><p><!--
---><!--
--->Potongan video yang merekam suasana, aktivitas, dan cerita di balik perjalanan RT4.<!--
---></p><!--
---></div><!--
---><div class="video-grid"><!--
---><article class="video-card reveal"><!--
---><video controls preload="none" poster="images/landscape/pegunungan-ekspedisi.jpg"><!--
---><source src="videos/ekspedisi-01.mp4" type="video/mp4"><!--
---><!--
--->Browser tidak mendukung pemutar video.<!--
---></video><!--
---><h3><!--
---><!--
--->Cuplikan Perjalanan<!--
---></h3><!--
---><p><!--
---><!--
--->[Ganti dengan video dan judul dokumentasi pertama.]<!--
---></p><!--
---></article><!--
---><article class="video-card reveal"><!--
---><video controls preload="none" poster="images/landscape/hutan-profil.jpg"><!--
---><source src="videos/ekspedisi-02.mp4" type="video/mp4"><!--
---><!--
--->Browser tidak mendukung pemutar video.<!--
---></video><!--
---><h3><!--
---><!--
--->Suasana Kebersamaan<!--
---></h3><!--
---><p><!--
---><!--
--->[Ganti dengan video dan judul dokumentasi kedua.]<!--
---></p><!--
---></article><!--
---></div><!--
---><p class="video-note"><!--
---><!--
--->Untuk menampilkan video, unggah berkas MP4 ke folder <!--
---><code><!--
---><!--
--->videos<!--
---></code><!--
---><!--
---> di repository dengan nama <!--
---><code><!--
---><!--
--->ekspedisi-01.mp4<!--
---></code><!--
---><!--
---> dan <!--
---><code><!--
---><!--
--->ekspedisi-02.mp4<!--
---></code><!--
---><!--
--->, atau ubah alamat sumber video di kode HTML.<!--
---></p><!--
---></section><!--
--->
-<!-- ==================== PENUTUP ==================== --><!--
---><section class="closing"><!--
---><div><!--
---><div class="eyebrow"><!--
---><!--
--->RT4 · EKSPEDISI<!--
---></div><!--
---><blockquote><!--
---><!--
--->“Setiap perjalanan memiliki cerita, setiap langkah membawa pengalaman, dan setiap kebersamaan menciptakan kenangan.”<!--
---></blockquote><!--
---><p><!--
---><!--
--->TERUS MELANGKAH · TERUS MENJELAJAH<!--
+-->Vid<section id="galeri">
+<div class="section-top reveal">
+<div>
+<div class="kicker">05 / Album perjalanan</div>
+<h2 class="section-title">Buku Dokumentasi.</h2>
+</div>
+<p>Kumpulan momen perjalanan, kegiatan, dan kebersamaan RT4 dalam satu galeri dokumentasi.</p>
+</div>
+<div class="photo-gallery-wrap reveal"><div class="photo-gallery" id="photoGallery"></div></div>
+<p class="gallery-note">Galeri menampilkan 8 foto sekaligus. Klik foto untuk melihat ukuran penuh. Untuk mengganti foto, unggah gambar ke folder images/dokumentasi/ dengan nama foto-01.jpg sampai foto-08.jpg.</p>
+</section>LAJAH<!--
 --></p><!--
 --></div><!--
 --></section><!--
@@ -1404,54 +1324,18 @@ memberPopover.addEventListener('click',event=>{if(event.target===memberPopover)c
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&memberPopover.classList.contains('open'))closeMemberPopover()});
 
 
-const photoSpreads=[
-[{src:'images/dokumentasi/album-alam-01.jpg',title:'Jejak di alam terbuka',caption:'[Ganti dengan keterangan dokumentasi asli.]'},{src:'images/dokumentasi/jurnal-danau.jpg',title:'Tenang di antara pegunungan',caption:'[Ganti dengan keterangan dokumentasi asli.]'}],
-[{src:'images/landscape/hutan-profil.jpg',title:'Menembus rimbun pepohonan',caption:'[Ganti dengan keterangan dokumentasi asli.]'},{src:'images/landscape/pegunungan-ekspedisi.jpg',title:'Melihat lebih jauh',caption:'[Ganti dengan keterangan dokumentasi asli.]'}],
-[{src:'images/dokumentasi/album-alam-02.jpg',title:'Alam menyimpan cerita',caption:'[Ganti dengan keterangan dokumentasi asli.]'},{src:'images/landscape/hero-hutan.jpg',title:'Setiap langkah berarti',caption:'[Ganti dengan keterangan dokumentasi asli.]'}]
-];let photoPage=0;
-function renderPhotoBook(){const spread=photoSpreads[photoPage];[['a',spread[0]],['b',spread[1]]].forEach(([suffix,item],i)=>{document.getElementById('photo-'+suffix).src=item.src;document.getElementById('photo-title-'+suffix).textContent=item.title;document.getElementById('photo-caption-'+suffix).textContent=item.caption;document.getElementById('photo-index-'+suffix).textContent='ALBUM '+String(photoPage+1).padStart(2,'0')+' / 0'+(photoPage*2+i+1)});document.getElementById('photo-count').textContent='SPREAD '+String(photoPage+1).padStart(2,'0')+' / 0'+photoSpreads.length;document.getElementById('photo-prev').disabled=photoPage===0;document.getElementById('photo-next').disabled=photoPage===photoSpreads.length-1}
-let photoTurning=false;
-function pageFace(item,side){
-  return '<div class="photo-turn-face '+side+'"><div class="photo-index">ALBUM / '+(side==='front'?'CATATAN':'HALAMAN BARU')+'</div><img src="'+item.src+'" alt=""><h3>'+item.title+'</h3><p>'+item.caption+'</p></div>';
-}
-function changePhotoPage(direction){
-  const target=photoPage+direction;
-  if(photoTurning||target<0||target>=photoSpreads.length)return;
-  photoTurning=true;
-  const book=document.getElementById('photoBook');
-  const current=photoSpreads[photoPage],next=photoSpreads[target];
-  const sheet=document.createElement('div');
-  sheet.className='photo-turn-sheet '+(direction>0?'turning-forward':'turning-backward');
-  const frontItem=direction>0?current[1]:current[0];
-  const backItem=direction>0?next[0]:next[1];
-  sheet.innerHTML=pageFace(frontItem,'front')+pageFace(backItem,'back');
-  book.appendChild(sheet);
-  document.getElementById('photo-prev').disabled=true;
-  document.getElementById('photo-next').disabled=true;
-  if(direction>0){
-    document.getElementById('photo-title-b').textContent=next[1].title;
-    document.getElementById('photo-caption-b').textContent=next[1].caption;
-    document.getElementById('photo-b').src=next[1].src;
-  }else{
-    document.getElementById('photo-title-a').textContent=next[0].title;
-    document.getElementById('photo-caption-a').textContent=next[0].caption;
-    document.getElementById('photo-a').src=next[0].src;
-  }
-  requestAnimationFrame(()=>sheet.classList.add('active'));
-  setTimeout(()=>{
-    photoPage=target;
-    renderPhotoBook();
-    sheet.remove();
-    photoTurning=false;
-  },920);
-}
-document.getElementById('photo-prev').addEventListener('click',()=>changePhotoPage(-1));
-document.getElementById('photo-next').addEventListener('click',()=>changePhotoPage(1));
-const photoBook=document.getElementById('photoBook');
-let swipeStartX=0;
-photoBook.addEventListener('touchstart',e=>{swipeStartX=e.changedTouches[0].screenX},{passive:true});
-photoBook.addEventListener('touchend',e=>{const delta=e.changedTouches[0].screenX-swipeStartX;if(Math.abs(delta)>55)changePhotoPage(delta<0?1:-1)},{passive:true});
-renderPhotoBook();
+const photoItems=[
+{src:'images/dokumentasi/foto-01.jpg',title:'Dokumentasi 01',caption:'Momen perjalanan RT4.'},
+{src:'images/dokumentasi/foto-02.jpg',title:'Dokumentasi 02',caption:'Momen perjalanan RT4.'},
+{src:'images/dokumentasi/foto-03.jpg',title:'Dokumentasi 03',caption:'Momen perjalanan RT4.'},
+{src:'images/dokumentasi/foto-04.jpg',title:'Dokumentasi 04',caption:'Momen perjalanan RT4.'},
+{src:'images/dokumentasi/foto-05.jpg',title:'Dokumentasi 05',caption:'Momen perjalanan RT4.'},
+{src:'images/dokumentasi/foto-06.jpg',title:'Dokumentasi 06',caption:'Momen perjalanan RT4.'},
+{src:'images/dokumentasi/foto-07.jpg',title:'Dokumentasi 07',caption:'Momen perjalanan RT4.'},
+{src:'images/dokumentasi/foto-08.jpg',title:'Dokumentasi 08',caption:'Momen perjalanan RT4.'}
+];
+const photoGallery=document.getElementById('photoGallery');
+photoGallery.innerHTML=photoItems.map((item,index)=>'<article class="gallery-item"><img src="'+item.src+'" alt="Foto dokumentasi '+(index+1)+'" loading="lazy"><h3>'+item.title+'</h3><p>'+item.caption+'</p></article>').join('');
 const lightbox=document.getElementById('lightbox'),lbImg=document.getElementById('lightbox-img');
 document.querySelectorAll('.gallery-item img').forEach(img=>img.addEventListener('click',()=>{lbImg.src=img.src;lbImg.alt=img.alt;lightbox.classList.add('open')}));
 function closeLightbox(){lightbox.classList.remove('open')}document.getElementById('close').addEventListener('click',closeLightbox);lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLightbox()});

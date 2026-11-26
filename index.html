@@ -177,12 +177,35 @@ function openMemberPopover(member){
   enlarged.removeAttribute('role');
   memberPopoverCard.innerHTML='';
   memberPopoverCard.appendChild(enlarged);
+  const memberName=member.querySelector('h3')?.textContent.trim()||'';
+  const missionBooks={
+    'Muhammad Sayyida Azhar':'Sayyida',
+    'Muhammad Majda Izzul Muttaqi':'Majda',
+    'Muhammad Al Barra Dinejad':'Barra',
+    'Hariz Hadi Haripin':'Hariz',
+    'Muhammad Imaddudin Akhtar':'Imaddudin',
+    'Muhammad Ikhtiar':'Ikhtiar',
+    'Rasya Zildan Anugrah':'Rasya',
+    'Faiq Zaid Abyan':'Faiq',
+    'Muhammad Zuhair Asyraf':'Zuhair',
+    'Muhammad Zahfan Hafizhuddin':'Zahfan',
+    'Azzam Fadhil Ramadhan':'Azzam'
+  };
+  const missionBookFile=missionBooks[memberName];
   const missionBookLink=document.createElement('a');
-  missionBookLink.className='member-mission-book is-empty';
-  missionBookLink.href='#';
-  missionBookLink.textContent='Mission Book — tautan segera ditambahkan';
-  missionBookLink.setAttribute('aria-disabled','true');
-  missionBookLink.addEventListener('click',event=>event.preventDefault());
+  missionBookLink.className='member-mission-book';
+  missionBookLink.textContent='Buka Mission Book PDF';
+  if(missionBookFile){
+    missionBookLink.href='mission-book/'+encodeURIComponent(missionBookFile+' — link PDF.pdf');
+    missionBookLink.target='_blank';
+    missionBookLink.rel='noopener';
+  }else{
+    missionBookLink.classList.add('is-empty');
+    missionBookLink.href='#';
+    missionBookLink.textContent='Mission Book belum tersedia';
+    missionBookLink.setAttribute('aria-disabled','true');
+    missionBookLink.addEventListener('click',event=>event.preventDefault());
+  }
   memberPopoverCard.appendChild(missionBookLink);
   memberPopover.classList.add('open');
   memberPopover.setAttribute('aria-hidden','false');
